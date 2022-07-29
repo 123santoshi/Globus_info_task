@@ -1,0 +1,204 @@
+.Container {
+    display: grid;
+    height: auto;
+    width: 100%;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: repeat(16, 1fr);
+}
+
+.header {
+    grid-column: 1 / span 16;
+    grid-row: 1;
+    border: 2px solid black;
+    background: rgb(32, 32, 155);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.head {
+    font-size: large;
+    padding: 5px 20px;
+    font-weight: 1000;
+    background: blue;
+    border-color: white;
+    border-radius: 5px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.navmenu {
+    grid-row: 2;
+    margin-bottom: 3px;
+    background: black;
+    position: fixed;
+    top: 70px;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar {
+    margin-left: 20px;
+    padding-right: 0px;
+}
+
+.navline {
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+    background-color: white;
+}
+
+.navbarHead {
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo1 {
+    height: 35px;
+    width: 35px;
+    padding-top: 2px;
+    padding-bottom: 8px;
+}
+
+.logoCont1 {
+    width: fit-content;
+    margin-left: 30px;
+}
+
+.day1,
+.day2,
+.day3 {
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.main {
+    grid-column: 1/span 16;
+    grid-row: 3;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    width: 100%;
+}
+
+.textHeader {
+    width: 100%;
+    height: fit-content;
+    background-color: blue;
+    color: white;
+    font-weight: 80;
+    font-size: 70px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.textDes {
+    font-size: 30px;
+    color: white;
+    font-weight: 400;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    background-color: rgb(32, 32, 155);
+}
+
+.videoHead {
+    font-size: 50px;
+    font-weight: 500;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    background-color: white
+}
+
+.video-container {
+    /* 16:9 */
+    border: 2px solid black;
+    margin-top: 10px;
+    text-align: center;
+    width: 80%;
+    height: 30vw;
+}
+
+.blockHead {
+    font-size: 60px;
+    background-color: rgb(32, 32, 155);
+    height: 100px;
+    text-align: center;
+    padding-top: 30px;
+    width: 100%;
+    right: 0px;
+    left: 15px;
+    color: white;
+    margin-top: 10px;
+}
+
+.col1 {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 3px solid rgb(32, 32, 155);
+}
+
+.col1>div {
+    margin-top: 20px;
+    width: 400px;
+    flex-grow: 1fr;
+}
+
+.box1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.box2 {
+    font-size: 18px;
+    text-align: left;
+}
+
+.box3 {
+    flex-grow: 1fr;
+    text-align: center;
+}
+
+@media(max-width:600px) {
+    .textHeader {
+        font-size: 10vw;
+    }
+    .navmenu {
+        flex-direction: column;
+        flex-basis: 40px;
+        justify-content: flex-start;
+        align-items: space-between;
+        height: fit-content;
+    }
+    .main {
+        padding-top: 150px;
+    }
+}
